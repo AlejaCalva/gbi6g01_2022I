@@ -1,0 +1,152 @@
+# BIOINFORMÁTICA
+
+## CLASE 6: Introducción a Python
+
+En esta clase vamos a revisar los siguientes contenidos:
+
+1. Historia de Python
+2. Tipos de datos
+3. Operaciones con números
+4. Operaciones con texto
+
+## 1. HISTORIA PYTHON
+
+La historia de Python se puede leer en la [página web de python](https://www.python.org/doc/)
+
+## 2. TIPOS DE DATOS
+
+- Numéricos: enteros (integer, int), decimales (double), complejos (complex).
+- Lógicos: Verdadero (TRUE, T), Falso (FALSE, F)
+- Texto: cadena de caracteres "Siempre entre comillas"
+
+gen1_r = 1.5
+gen1_h = 1.7
+dif_gen1 = gen1_r - gen1_h
+radio_gen1 = gen1_r / gen1_h
+
+print("gen1_h:", gen1_h)
+print("gen1_r:", gen1_r)
+print("dif_gen1:", dif_gen1)
+print("radio_gen1:", radio_gen1)
+
+## Operaciones con texto 
+
+saludo = "hola con todos, que bueno que no hay examen"
+saludo.upper()
+
+
+len(saludo)
+
+# En este bloque se revisa el uso combinado de funciones
+total = len(saludo)
+char_a = saludo.count("a")
+radio_a = 100*char_a / total
+print("Porcentaje de a:", radio_a)
+
+
+round(radio_a, 2)
+
+#Porcentaje de GC
+Calcular el porcentaje de contenido de nucléotidos G y C en la siguiente secuencia
+
+
+
+
+p53_l1 = "TTCCTGGNCTGTAGGTAGCGACTACAGTTAGGGGGCACCTAGCATTCAGGCCCTCATCCTCCTCCTTCCC"
+
+calcular el porcentaje de GC
+
+percent_GC = 100*(p53_l1.count("G") + p53_l1.count("C"))/len(p53_l1)
+print("Porcentaje GC en P53_linea1: ", round(percent_GC, 3))
+
+# Subconjunto
+print(p53_l1)
+fi = p53_l1.find("TAC") # Si se tiene
+ff1 = p53_l1.find("ATT") # Si se tiene
+ff2 = p53_l1.find("ATC")
+ff3 = p53_l1.find("ACT")
+
+
+
+ff3
+
+p53_l1[3:6]
+
+p53_l1[0:2]
+
+mRNA_f1 = p53_l1[fi:ff1+3]
+mRNA_f1
+
+# Cadena Complementaria
+print(saludo)
+saludo.replace("x", "e")
+
+p53_a = p53_l1.replace("A", "t")
+p53_t = p53_a.replace("T", "a")
+p53_g = p53_t.replace("G", "c")
+p53_c = p53_g.replace("C", "g")
+p53_l1c = p53_c.upper()
+p53_l1c
+
+
+
+
+print(p53_l1)
+print(p53_l1c)
+
+p53_l1c_r = p53_l1c[::-1]
+print(p53_l1)
+print(p53_l1c)
+print(p53_l1c_r)
+
+p53_l1c_r. find("TAC")
+
+p53_l1 = "TTCCTGGNCTGTAGGTAGCGACTACAGTTAGGGGGCACCTAGCATTCAGGCCCTCATCCTCCTCCTTCCCAGCAGGGTGTCACGCTTCTCCGAAGACTGGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTACTTCCTCCAGAAGATATCCTGCCATC"
+
+percent_GC = 100*(p53_l1.count("G") + p53_l1.count("C"))/len(p53_l1)
+print("Porcentaje GC en P53_linea1: ", round(percent_GC, 3))
+
+# Subconjunto
+print(p53_l1)
+fi = p53_l1.find("TAC") # Si se tiene
+ff1 = p53_l1.find("ATT") # Si se tiene
+ff2 = p53_l1.find("ATC")
+ff3 = p53_l1.find("ACT")
+
+ff3
+
+p53_l1[3:6]
+
+p53_l1[0:2]
+
+mRNA_f1 = p53_l1[fi:ff1+3]
+mRNA_f1
+
+p53_a = p53_l1.replace("A", "t")
+p53_t = p53_a.replace("T", "a")
+p53_g = p53_t.replace("G", "c")
+p53_c = p53_g.replace("C", "g")
+p53_l1c = p53_c.upper()
+p53_l1c
+
+print(p53_l1)
+print(p53_l1c)
+
+p53_l1c_r = p53_l1c[::-1]
+print(p53_l1)
+print(p53_l1c)
+print(p53_l1c_r)
+
+p53_l1c_r. find("TAC")
+
+percent_GC = 100*(p53_l1c_r.count("G") + p53_l1c_r.count("C"))/len(p53_l1c_r)
+print("Porcentaje GC en P53_linea1: ", round(percent_GC, 3))
+
+# Subconjunto
+print(p53_l1c_r)
+ficr = p53_l1c_r.find("TAC") # Si se tiene
+ff1cr = p53_l1c_r.find("ATT") # Si se tiene
+ff2cr = p53_l1c_r.find("ATC")
+ff3cr = p53_l1c_r.find("ACT")
+mRNA_f1cr = p53_l1c_r[ficr:ff1cr+3]
+mRNA_f1cr
